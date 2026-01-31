@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Residencial Copenhagen | GF Instalações</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: {
+                default: "#050505",
+                surface: "#0F0F0F",
+                surface2: "#1A1A1A",
+              },
+              brand: {
+                gold: "#C6A87C",
+                goldLight: "#E0C8A0",
+                goldDark: "#8C7350",
+              },
+              text: {
+                primary: "#FFFFFF",
+                secondary: "#A1A1AA",
+                tertiary: "#52525B",
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Manrope', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            },
+            letterSpacing: {
+              widest: '0.15em',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        background-color: #050505;
+        color: #FFFFFF;
+      }
+      .masonry-grid {
+        column-count: 1;
+        column-gap: 1.5rem;
+      }
+      @media (min-width: 640px) {
+        .masonry-grid { column-count: 2; }
+      }
+      @media (min-width: 1024px) {
+        .masonry-grid { column-count: 3; }
+      }
+      .break-inside-avoid {
+        break-inside: avoid;
+      }
+    </style>
+  </head>
+  <body class="antialiased font-sans">
+    
+    <!-- 1. Header Simplificado -->
+    <nav class="fixed top-0 w-full z-50 p-6 md:p-8 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent pointer-events-none">
+      <a href="index.html" class="pointer-events-auto flex items-center gap-2 text-white hover:text-brand-gold transition-colors group">
+        <i data-lucide="arrow-left" class="w-5 h-5 text-brand-gold group-hover:-translate-x-1 transition-transform"></i>
+        <span class="text-xs font-bold uppercase tracking-widest hidden md:inline-block">Voltar</span>
+      </a>
+      
+      <a href="index.html" class="pointer-events-auto font-heading font-bold text-xl tracking-widest text-white uppercase absolute left-1/2 -translate-x-1/2">
+        GF <span class="text-brand-gold">.</span>
+      </a>
+      
+      <div class="w-10"></div> <!-- Spacer -->
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://picsum.photos/1920/1080?random=20" alt="Residencial Copenhagen" class="w-full h-full object-cover filter brightness-[0.4] grayscale-[30%]">
+      </div>
+      
+      <div class="relative z-10 text-center px-6 animate-fade-in-up">
+        <span class="block text-brand-gold text-xs font-bold uppercase tracking-[0.3em] mb-4">Portfólio Exclusivo</span>
+        <h1 class="font-heading font-bold text-4xl md:text-7xl text-white uppercase tracking-tight mb-4">
+          Residencial <br> Copenhagen
+        </h1>
+        <div class="w-20 h-0.5 bg-brand-gold mx-auto mb-6"></div>
+        <p class="font-sans text-white/80 text-sm md:text-lg uppercase tracking-widest font-light">
+          Construtora Cechinel | Balneário Camboriú
+        </p>
+      </div>
+    </header>
+
+    <!-- 3. Ficha Técnica -->
+    <section class="border-b border-white/5 bg-background-surface">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
+          
+          <div class="p-8 md:p-12 text-center md:text-left">
+            <span class="block text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-2">Serviço</span>
+            <p class="text-white font-heading font-semibold text-lg">Instalação de Portas e Rodapés</p>
+          </div>
+          
+          <div class="p-8 md:p-12 text-center md:text-left">
+            <span class="block text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-2">Área Executada</span>
+            <p class="text-white font-heading font-semibold text-lg">2.500m²</p>
+          </div>
+          
+          <div class="p-8 md:p-12 text-center md:text-left">
+            <span class="block text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-2">Prazo</span>
+            <p class="text-white font-heading font-semibold text-lg">45 Dias <span class="text-xs text-brand-gold ml-1 font-normal opacity-80">(No Prazo)</span></p>
+          </div>
+          
+          <div class="p-8 md:p-12 text-center md:text-left">
+            <span class="block text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-2">Desafio</span>
+            <p class="text-white font-heading font-semibold text-lg">Acústica e Vedações Especiais</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Storytelling -->
+    <section class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          
+          <div class="lg:w-1/2">
+            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest block mb-4">Case Study</span>
+            <h2 class="font-heading font-bold text-3xl md:text-5xl text-white uppercase mb-8 leading-tight">
+              O Desafio <br> Técnico
+            </h2>
+            <div class="text-text-secondary leading-relaxed font-light">
+              <p class="mb-6 text-lg">
+                Neste projeto, a exigência acústica era a prioridade. Utilizamos espuma expansiva de alta densidade e vedação dupla nos batentes, garantindo conformidade total com a NBR 15930.
+              </p>
+              <p>
+                O acabamento dos rodapés seguiu o padrão de corte 45º, sem emendas visíveis, integrando-se perfeitamente à arquitetura minimalista proposta pelo escritório de interiores. A logística de transporte vertical para os andares altos também exigiu planejamento rigoroso para não impactar o cronograma da obra.
+              </p>
+            </div>
+            
+            <div class="mt-10 flex gap-4">
+              <div class="flex items-center gap-2 text-white/60 text-xs uppercase tracking-wider">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i> NBR 15930
+              </div>
+              <div class="flex items-center gap-2 text-white/60 text-xs uppercase tracking-wider">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i> Acústica Pro
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2 w-full">
+            <div class="relative aspect-[4/5] bg-background-surface group overflow-hidden border border-white/5">
+               <img src="https://picsum.photos/800/1000?random=21" alt="Detalhe técnico da porta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%]">
+               <div class="absolute bottom-6 right-6 bg-black/80 backdrop-blur px-4 py-2 text-[10px] text-white uppercase tracking-widest border border-white/10">
+                 Detalhe: Vedação Acústica
+               </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Galeria Masonry -->
+    <section class="py-24 bg-background-surface border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+           <span class="text-brand-gold text-xs font-bold uppercase tracking-widest block mb-3">Imagens</span>
+           <h2 class="font-heading font-semibold text-3xl text-white uppercase">Execução e Detalhes</h2>
+        </div>
+
+        <div class="masonry-grid">
+           <!-- Item 1 -->
+           <div class="mb-6 break-inside-avoid relative group overflow-hidden border border-white/5">
+             <img src="https://picsum.photos/600/800?random=30" class="w-full h-auto grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
+             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+           </div>
+           <!-- Item 2 -->
+           <div class="mb-6 break-inside-avoid relative group overflow-hidden border border-white/5">
+             <img src="https://picsum.photos/600/400?random=31" class="w-full h-auto grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
+           </div>
+           <!-- Item 3 -->
+           <div class="mb-6 break-inside-avoid relative group overflow-hidden border border-white/5">
+             <img src="https://picsum.photos/600/600?random=32" class="w-full h-auto grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
+           </div>
+           <!-- Item 4 -->
+           <div class="mb-6 break-inside-avoid relative group overflow-hidden border border-white/5">
+             <img src="https://picsum.photos/600/900?random=33" class="w-full h-auto grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
+           </div>
+            <!-- Item 5 -->
+           <div class="mb-6 break-inside-avoid relative group overflow-hidden border border-white/5">
+             <img src="https://picsum.photos/600/500?random=34" class="w-full h-auto grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
+           </div>
+            <!-- Item 6 -->
+           <div class="mb-6 break-inside-avoid relative group overflow-hidden border border-white/5">
+             <img src="https://picsum.photos/600/700?random=35" class="w-full h-auto grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
+           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Footer Navigation -->
+    <footer class="py-20 bg-background-default border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        
+        <h3 class="font-heading text-2xl text-white uppercase mb-8">Gostou deste resultado?</h3>
+        
+        <a href="https://wa.me/5547984717341" target="_blank" class="inline-flex items-center gap-3 bg-brand-gold text-background-default px-10 py-4 font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(198,168,124,0.3)] mb-16">
+          Solicitar Orçamento Similar
+        </a>
+
+        <div class="flex justify-between items-center border-t border-white/10 pt-8">
+          <a href="#" class="text-text-secondary hover:text-white text-xs uppercase tracking-widest flex items-center gap-2 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Projeto Anterior
+          </a>
+          <a href="#" class="text-text-secondary hover:text-white text-xs uppercase tracking-widest flex items-center gap-2 transition-colors">
+            Próximo Projeto <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
